@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'app'
 ]
 
@@ -74,24 +75,34 @@ WSGI_APPLICATION = 'add_data.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://h:p068ebbd2d195020c8a876b87dfbe407797f404396713f3f5c1121cd0c9b0e801@ec2-54-92-161-44.compute-1.amazonaws.com:9419",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "example"
     }
 }
 
 
-# DATABASES = {
-#         'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd8kll1jhab2hc3',
-#         'USER': 'mffvjlqmhzelxc',
-#         'PASSWORD': '99d9cd08b03a9cd6e8de44a7a505cf7e910f5e25b825ad05149df345786d9463',
-#         'HOST' : 'ec2-54-217-213-79.eu-west-1.compute.amazonaws.com',
-#         'PORT': '5432'
-#             }
-#         }
+DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd',
+        'USER': 'gi',
+        'PASSWORD': 'd70d39c',
+        'HOST' : 'ec2',
+        'PORT': '5432'
+            }
+        }
 
 
 # Password validation
