@@ -81,16 +81,10 @@ WSGI_APPLICATION = 'add_data.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://h:p068ebbd2d195020c8a876b87dfbe407797f404396713f3f5c1121cd0c9b0e801@ec2-54-92-161-44.compute-1.amazonaws.com:9419",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient"
-        },
-        "KEY_PREFIX": "example"
-    }
-}
+# CACHES = {
+#  
+#     }
+# }
 
 
 DATABASES = {
