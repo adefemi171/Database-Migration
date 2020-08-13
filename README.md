@@ -6,7 +6,7 @@ Clone the repository using
 ## Project Startup
 Edit settings.py in [add_data/settings.py](https://github.com/adefemi171/Database-Migration/blob/master/add_data/settings.py) to include your database configuration
 
-Also, note that the csv file am using is from [Centers for Disease Control and Prevention](https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-S/9bhg-hcku) and dated 29th July, 2020
+Also, note that the csv file am using is from [Centers for Disease Control and Prevention](https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-S/9bhg-hcku) and dated 12th August, 2020
 
 After making the changes run:
 ```
